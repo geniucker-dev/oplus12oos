@@ -1,0 +1,7 @@
+id=oplus12oos
+name=OnePlus 12 OxygenOS Module
+version=1.0.0
+versionCode=1
+author=geniucker-dev
+description=一加12 OxygenOS 自用模块
+updateJson=https://raw.githubusercontent.com/geniucker-dev/oplus12oos/main/update.json
