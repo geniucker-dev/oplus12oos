@@ -34,7 +34,7 @@ jobs:
 
       - name: Zip files (excluding .git .github)
         run: |
-          zip -r -o -X -ll WalletFix4OOS14_${{ needs.setup.outputs.VERSION }}.zip ./ -x '.git/*' -x '.github/*' -x 'update.json'
+          zip -r -o -X -ll oplus12oos_${{ needs.setup.outputs.VERSION }}.zip ./ -x '.git/*' -x '.github/*' -x 'update.json'
 
       - name: Create a tag
         run: |
@@ -51,19 +51,19 @@ jobs:
         with:
           name: ${{ needs.setup.outputs.VERSION }}
           tag_name: ${{ needs.setup.outputs.VERSION }}
-          files: WalletFix4OOS14_${{ needs.setup.outputs.VERSION }}.zip
+          files: oplus12oos_${{ needs.setup.outputs.VERSION }}.zip
 
       - name: write update.json
         run: |
           version="${{ needs.setup.outputs.VERSION }}"
           versionCode=${{ needs.setup.outputs.VERSIONCODE }}
-          zipUrl="https://github.com/geniucker-dev/WalletFix4OOS14/releases/download/${version}/WalletFix4OOS14_${version}.zip"
+          zipUrl="https://github.com/geniucker-dev/oplus12oos/releases/download/${version}/oplus12oos_${version}.zip"
           # echo "{\"version\": \"${version}\", \"versionCode\": ${versionCode}, \"url\": \"${zipUrl}\"}" > update.json
           echo '{
             "version": "'${version}'",
             "versionCode": '${versionCode}',
             "zipUrl": "'${zipUrl}'",
-            "changelog": "https://raw.githubusercontent.com/geniucker-dev/WalletFix4OOS14/main/changelog.md"
+            "changelog": "https://raw.githubusercontent.com/geniucker-dev/oplus12oos/main/changelog.md"
           }' > update.json
           git add update.json
           git commit -m "Update update.json"

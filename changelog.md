@@ -1,8 +1,4 @@
-## WalletFix4OOS14 更新日志
-
-### 1.0.1
-
-Nothing changed.
+## 更新日志
 
 ### 1.0.0
 

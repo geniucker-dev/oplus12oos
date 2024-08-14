@@ -1,7 +1,7 @@
-id=walletfix4oos14
-name=Wallet Fix
-version=1.0.1
-versionCode=3
+id=oplus12oos
+name=OnePlus 12 OxygenOS Module
+version=1.0.0
+versionCode=1
 author=geniucker-dev
-description=Remove OxygenOS account
-updateJson=https://raw.githubusercontent.com/geniucker-dev/WalletFix4OOS14/main/update.json
+description=一加12 OxygenOS 自用模块
+updateJson=https://raw.githubusercontent.com/geniucker-dev/oplus12oos/main/update.json
