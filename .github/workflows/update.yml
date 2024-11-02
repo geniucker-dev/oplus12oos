@@ -82,6 +82,9 @@ jobs:
 
       - name: Update files
         run: |
+          git checkout --orphan apk
+          git reset --hard
+
           # mount images
           mkdir -p mnt/my_stock
           mkdir -p mnt/my_heytap
@@ -125,9 +128,6 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           # clear hystory
-          git checkout --orphan temp_branch
           git add -A
           git commit -m "${{ github.event.inputs.msg }}"
-          git branch -D main
-          git branch -m main
-          git push -f origin main
+          git push -f origin apk
